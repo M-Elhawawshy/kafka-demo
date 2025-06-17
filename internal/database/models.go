@@ -22,6 +22,11 @@ type Outbox struct {
 	Published     bool               `json:"published"`
 }
 
+type Processed struct {
+	ID      uuid.UUID   `json:"id"`
+	Content pgtype.Text `json:"content"`
+}
+
 type Test struct {
 	ID      uuid.UUID   `json:"id"`
 	Content pgtype.Text `json:"content"`
